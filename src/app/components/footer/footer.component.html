@@ -1,0 +1,9 @@
+<footer class="p-2 bg-dark text-white text-right">
+  Server Status:
+  <ng-template [ngIf]="serverOnline$ | async" [ngIfElse]="offline">
+    <span class="text-success"> Online</span>
+ </ng-template>
+ <ng-template #offline>
+  <span class="text-danger"> Offline</span>
+ </ng-template>
+</footer>
